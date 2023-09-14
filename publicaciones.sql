@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `forodb`
+-- Base de datos: `publicaciones`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `publicaciones`
+-- Estructura de tabla para la tabla `publicacion`
 --
 
-CREATE TABLE `publicaciones` (
+CREATE TABLE `publicacion` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `detalle` text NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `publicaciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Volcado de datos para la tabla `publicaciones`
+-- Volcado de datos para la tabla `publicacion`
 --
 
-INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_publicacion`) VALUES
+INSERT INTO `publicacion` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_publicacion`) VALUES
 (1, 'Ransomware', 'Es un malware que encripta los datos de los dispositivos electrónicos (PC, ETC)', 'https://latam.kaspersky.com/content/es-mx/images/repository/isc/2021/ransomware.jpg', '2023-08-21'),
 (3, 'Naturaleza', 'Detalle Naturaleza', 'https://www.repsol.com/content/dam/repsol-corporate/es/sostenibilidad/naturaleza%20bosque%20y%20lago.jpg.transform/rp-rendition-md/image.jpg', '2023-09-11'),
 (4, 'Troyano', 'Es un malware que se oculta en archivos que se hacen pasar por legítimos, toman el control del dispositivo.', 'https://concepto.de/wp-content/uploads/2018/10/virus-troyano1-e1539978315283.jpg', '2023-09-13'),
@@ -51,9 +51,9 @@ INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_pub
 --
 
 --
--- Indices de la tabla `publicaciones`
+-- Indices de la tabla `publicacion`
 --
-ALTER TABLE `publicaciones`
+ALTER TABLE `publicacion`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,9 +61,9 @@ ALTER TABLE `publicaciones`
 --
 
 --
--- AUTO_INCREMENT de la tabla `publicaciones`
+-- AUTO_INCREMENT de la tabla `publicacion`
 --
-ALTER TABLE `publicaciones`
+ALTER TABLE `publicacion`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
