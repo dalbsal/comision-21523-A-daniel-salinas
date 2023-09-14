@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/dalbsal/comision-21523-A-daniel-salinas/issues"
   },
-  "homepage": "https://github.com/dalbsal/comision-21523-A-daniel-salinas#readme",
+  "homepage": "https://github.com/dalbsal/comision-21523-A-daniel-salinas#readme", 
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
