@@ -1,5 +1,5 @@
 {
-  "name": "21524A-practica-express",
+  "name": "Proyecto Final - ArgentinaPrograma 4.0",
   "version": "1.0.0",
   "description": "![Express Nodejs](https://miro.medium.com/v2/resize:fit:1400/1*f7ztMaMM0etsFHpEfkdiwA.png)",
   "main": "app.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aalesann/21524A-practica-express.git"
+    "url": "git+https://github.com/dalbsal/comision-21523-A-daniel-salinas.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aalesann/21524A-practica-express/issues"
+    "url": "https://github.com/dalbsal/comision-21523-A-daniel-salinas/issues"
   },
-  "homepage": "https://github.com/aalesann/21524A-practica-express#readme",
+  "homepage": "https://github.com/dalbsal/comision-21523-A-daniel-salinas#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
