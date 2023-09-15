@@ -1,0 +1,1 @@
+import { eliminarPublicacion } from './crud-post.js';

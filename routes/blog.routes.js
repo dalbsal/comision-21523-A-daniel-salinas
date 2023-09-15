@@ -16,7 +16,13 @@ router.get('/admin', (req, res) => {
     res.render('admin')
 })
 
+router.get('/editar', (req, res) => {
+    res.render('editar')
+})
 
+router.get('/eliminar', (req, res) => {
+    res.render('eliminar')
+})
 // =====================================
 //      RUTAS PARA MANEJAR DATOS
 // =====================================
