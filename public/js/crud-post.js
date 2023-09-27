@@ -45,7 +45,7 @@ export const mostrarDatosPublicaciones = (publicaciones, elemento) => {
 //Eliminar una publicación
 const deletePost = async (id) => {
     // Se envía la petición al servidor
-    const response = await fetch(`/eliminar/${id}`, {
+    const response = await fetch('/eliminar/${id}', {
         method: 'delete'
     })
 

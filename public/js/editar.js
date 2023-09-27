@@ -1,8 +1,7 @@
 //import { obtenerPublicaciones } from './crud-post.js';
 
 const obtenerPublicacion = async (id) => {
-    
-    const response = await fetch(`/editar/${id}`)
+    const response = await fetch('/editar/${id}')
     const data = await response.json()
 
     alert(data);
@@ -17,7 +16,6 @@ const id = formEditar.dataset.id
 
 // Cuando se carga el contenido del html y recursos estáticos, se solicita la publicación y se muestran en el formulario
 document.addEventListener('DOMContentLoaded', async () => {
-    
     // Se obtiene la publicación
     const publicacion = await obtenerPublicacion(id);
 
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     url_imagen.value = publicacion.url_imagen;
     fecha_publicacion.value = new Date(publicacion.fecha_publicacion).toISOString().split('T')[0];
     nombre_autor.value = publicacion.nombre_autor;
-    
+
 })
 
 
@@ -50,7 +48,7 @@ formEditar.addEventListener('submit', async (e) => {
     const nombre_autor = document.querySelector('#nombre_autor').value;
 
     // Se envia al servidor
-    const response = await fetch(`/editar/${id}`, {
+    const response = await fetch('/editar/${id}', {
         method: 'put',
         headers: {
             'Content-Type':'application/json'
@@ -61,5 +59,5 @@ formEditar.addEventListener('submit', async (e) => {
 
     alert(data.msg);
     location.href = "/admin"
-
+    
 })

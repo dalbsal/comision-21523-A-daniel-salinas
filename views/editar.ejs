@@ -1,9 +1,10 @@
 <%-include("partials/header") %>
 <link rel="stylesheet" href="/css/admin.css">
-
+</head>
+<body>
 
     <%-include("partials/navbar") %>
-
+    
     <div class="container mt-5">
         <div class="col-md-6 mx-auto border rounded p-2">
             <div class="row">
@@ -31,9 +32,12 @@
                             <input type="text" id="nombre_autor" class="form-control" placeholder="Nombre del Autor">
                         </div>
 
-                        <button type="submit" class="btn btn-sm btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Enviar
                         </button>
+                        <a href="/" class="btn btn-danger" id="btn-cancelar">
+                            Cancelar
+                        </a>
                     </form>
                 </div>
             </div>
