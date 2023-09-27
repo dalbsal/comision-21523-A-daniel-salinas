@@ -57,17 +57,14 @@ ctrl.updatePost = async (req, res) => {
 }
 
 ctrl.deletePost = async (req, res) => {
-
+    
     const { id } = req.params;
-
-
     try {
         await Publicacion.destroy({
             where: {
                 id
             }
         })
-
         return res.json({
             msg: 'Publicación eliminada con éxito!'
         })
@@ -78,6 +75,8 @@ ctrl.deletePost = async (req, res) => {
         })
     }
 
+    alert(id.msg)
 }
+
 
 module.exports = ctrl;

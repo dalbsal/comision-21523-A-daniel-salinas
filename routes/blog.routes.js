@@ -8,32 +8,38 @@ const router = Router()
 //      RUTAS PARA RENDERIZAR VISTAS
 // =====================================
 
+//Vista Principal de las publicaciones
 router.get('/', (req, res) => {
     res.render('index')
 })
 
+
+//Vista para agregar una nueva publicación
 router.get('/admin', (req, res) => {
     res.render('admin')
 })
 
-router.get('/editar', (req, res) => {
-    res.render('editar')
+//Vista para editar una publicación
+router.get('/editar/:id', (req, res) => {
+    res.render('editar', {id: req.params.id})
 })
 
-router.get('/eliminar', (req, res) => {
-    res.render('eliminar')
-})
+
 // =====================================
 //      RUTAS PARA MANEJAR DATOS
 // =====================================
 
-router.get('/publicaciones', getPosts)
-
+// Crear nueva publicación
 router.post('/publicacion', newPost)
 
-router.put('/publicacion/:id', updatePost)
+// Obtener todas las publicaciones
+router.get('/publicaciones', getPosts)
 
-router.delete('/publicacion/:id', deletePost)
+// Actualizar una publicación
+router.put('/editar/:id', updatePost)
+
+// Eliminar una publicación
+router.delete('/eliminar/:id', deletePost)
 
 
 module.exports = router;
