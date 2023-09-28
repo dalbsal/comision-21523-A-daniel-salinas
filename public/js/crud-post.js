@@ -1,6 +1,6 @@
 export const crearPublicaciones = async (datos) => {
     const response = await fetch('/publicacion', {
-        method: 'POST',
+        method: 'post',
         headers: {
             'Content-Type':'application/json'
         },

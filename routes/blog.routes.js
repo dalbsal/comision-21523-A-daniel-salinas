@@ -1,7 +1,6 @@
-// const router = require('express').Router();
 
 const { Router } = require('express');
-const { getPosts, newPost, updatePost, deletePost } = require('../controllers/blog.controllers');
+const { getPosts, getPost, newPost, updatePost, deletePost } = require('../controllers/blog.controllers');
 const router = Router()
 
 // =====================================
@@ -12,7 +11,7 @@ const router = Router()
 router.get('/', (req, res) => {
     res.render('index')
 })
-
+ 
 
 //Vista para agregar una nueva publicación
 router.get('/admin', (req, res) => {
@@ -20,8 +19,8 @@ router.get('/admin', (req, res) => {
 })
 
 //Vista para editar una publicación
-router.get('/editar/:id', (req, res) => {
-    res.render('editar', {id: req.params.id})
+router.get('/editar/:id', (req, res)=> {
+    res.render('editar', { id: req.params.id })
 })
 
 
@@ -34,6 +33,9 @@ router.post('/publicacion', newPost)
 
 // Obtener todas las publicaciones
 router.get('/publicaciones', getPosts)
+
+// Obtener una publicacion
+router.get('/publicacion/:id', getPost)
 
 // Actualizar una publicación
 router.put('/editar/:id', updatePost)

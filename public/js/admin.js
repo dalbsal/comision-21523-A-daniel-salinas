@@ -2,7 +2,7 @@ import { crearPublicaciones } from './crud-post.js';
 
 
 // Referencia a elemento formulario de nueva publicación
-const formNuevaPub = document.querySelector('#form-nuevo');
+const formNuevaPub = document.querySelector('#form-guardar');
 
 formNuevaPub.addEventListener('submit', async (e) => {
     e.preventDefault();

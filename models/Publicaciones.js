@@ -20,8 +20,7 @@ const Publicacion = sequelize.define('Publicacion', {
     },
     fecha_publicacion: {
         type: DataTypes.DATE,
-        allowNull: true,
-        defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        allowNull: false,
     },
     nombre_autor: {
         type: DataTypes.STRING(255),

@@ -7,7 +7,6 @@ ctrl.newPost = async (req, res) => {
 
     try {
         const publicacion = await Publicacion.create(req.body);
-        
         await publicacion.save()
 
         res.send({ msg: "Publicación creada con éxito", publicacion })
@@ -30,24 +29,32 @@ ctrl.getPosts = async (req, res) => {
             msg: "Error al consultar las publicaciones"
         })
     }
-
 }
 
-ctrl.updatePost = async (req, res) => {
+ctrl.getPost = async (req, res) => {
+    try {
+        const publicacion = await Publicacion.findByPk(req.params.id)
+        return res.json(publicacion)
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            msg: "Error al obtener las publicación"
+        })
+    }
+} 
 
+ctrl.updatePost = async (req, res) => {
     const { id } = req.params;
 
     try {
-        
         const publicacion = await Publicacion.findByPk(id);
         publicacion.set(req.body);
 
-        await publicacion.save();
+        await publicacion.save(); //Con esta instrucción se guarda en la base de datos
 
         return res.json({
             msg: "La publicación se ha actualizado exitosamente"
         })
-
     } catch (error) {
         console.log(error);
         return res.status(500).json({
@@ -74,8 +81,6 @@ ctrl.deletePost = async (req, res) => {
             msg: "Error al eliminar la publicación"
         })
     }
-
-    alert(id.msg)
 }
 
 
